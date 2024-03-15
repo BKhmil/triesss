@@ -39,7 +39,7 @@ class Item {
 		// стрілочна для того щоб контекст не належав кнопці, а належав новому об'єкту
 		buttonAdd.onclick = () => {
 			const cart = JSON.parse(localStorage.getItem('cart')) ?? [];
-			cart.push({title: this.title, monthDuration: this.monthDuration});
+			cart.push({title: this.title, monthDuration: this.monthDuration, addTime: new Date()});
 			localStorage.setItem('cart', JSON.stringify(cart));
 		};
 	}
